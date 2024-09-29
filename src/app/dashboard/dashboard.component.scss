@@ -1,0 +1,16 @@
+.dashboard-container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  display: flex;
+}
+
+.user-panel {
+  height: 100%;
+  width: 25%;
+}
+
+.data-panel {
+  flex-grow: 1;
+}

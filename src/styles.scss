@@ -5,10 +5,14 @@
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.firebase-emulator-warning {
+  display: none;
 }

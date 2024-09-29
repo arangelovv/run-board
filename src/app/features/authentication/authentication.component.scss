@@ -1,0 +1,65 @@
+.auth-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full height of the viewport */
+  background-color: #fafafa;
+}
+
+.auth-box {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  padding-left: 75px;
+  padding-right: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: hsl(0, 0%, 97%);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.auth-box-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.auth-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #020617;
+}
+
+.auth-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #020617;
+}
+
+.google-login-button {
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 20px;
+  border: 1px solid black;
+  background-color: hsl(0, 0%, 97%);
+  cursor: pointer;
+
+  img {
+    width: 18px;
+  }
+}

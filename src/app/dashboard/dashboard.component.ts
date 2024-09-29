@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { UserPanelComponent } from '../features/user-panel/user-panel.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [],
+  imports: [UserPanelComponent],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+  styleUrl: './dashboard.component.scss',
 })
-export class DashboardComponent {
-
-}
+export class DashboardComponent {}

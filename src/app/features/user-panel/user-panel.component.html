@@ -1,0 +1,16 @@
+<div class="user-panel-container">
+  <div class="user-panel-header">
+    <img [src]="userProfileImage" alt="image" />
+    <span class="username">{{ authService.user()?.displayName }}</span>
+  </div>
+  <div class="user-panel-stats">
+    <span>Km ran</span>
+    <span>Graph of past weeks</span>
+  </div>
+  <div class="user-panel-footer">
+    <button (click)="authService.signOut()">
+      <span class="material-symbols-outlined"> logout </span>
+      Logout
+    </button>
+  </div>
+</div>
