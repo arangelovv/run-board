@@ -11,8 +11,20 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f5f5f4;
 }
 
 .firebase-emulator-warning {
   display: none;
+}
+
+:root {
+  --ds-clr-zinc-100: #f4f4f5;
+  --ds-clr-zinc-200: #e4e4e7;
+  --ds-clr-zinc-600: #52525b;
+  --ds-clr-gray-50: #f9fafb;
+  --ds-clr-gray-300: #d1d5db;
+  --ds-clr--gray-600-30: rgba(75, 85, 99, 0.302);
+  --ds-clr-red-500: #ef4444;
+  --ds-surface-overlay: #fdfdfc;
 }
