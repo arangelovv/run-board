@@ -4,6 +4,7 @@
   height: 100%;
   padding: 2%;
   display: flex;
+  gap: 10px;
 }
 
 .user-panel {
@@ -13,4 +14,5 @@
 
 .data-panel {
   flex-grow: 1;
+  height: 100%;
 }

@@ -9,6 +9,8 @@
   background-color: var(--ds-surface-overlay);
   padding: 10px;
   border-radius: 8px;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 
   .user-panel-header {
     display: flex;
