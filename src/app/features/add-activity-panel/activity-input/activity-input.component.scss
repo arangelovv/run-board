@@ -1,0 +1,14 @@
+.input-container {
+  display: inline-block; /* Ensure it only takes the required space */
+  width: auto; /* Adjust the container width as needed */
+  padding: 0; /* Remove extra padding */
+  margin: 0; /* Remove extra margin */
+}
+
+.activity-input {
+  width: 100px; /* Set a fixed width for the input */
+  padding: 4px 8px; /* Adjust padding for a smaller size */
+  font-size: 14px; /* Set a smaller font size */
+  border: 1px solid #ddd; /* Optional: Border for visibility */
+  border-radius: 4px; /* Optional: Rounding corners */
+}
