@@ -19,15 +19,15 @@
     gap: 10px;
 
     img {
-      width: 150px;
-      height: 150px;
+      width: 10vw; /* Responsive width relative to viewport width */
+      height: 10vw; /* Responsive height relative to viewport width */
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid #ddd;
     }
 
     .username {
-      font-size: 18px;
+      font-size: 1.75vw;
       font-weight: 500;
     }
   }
@@ -37,6 +37,7 @@
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
+    font-size: 1vw;
   }
 
   .user-panel-footer {
@@ -52,6 +53,7 @@
       color: #374151;
       cursor: pointer;
       transition: color 0.3s ease;
+      font-size: 1vw;
     }
     button:hover {
       color: #ef4444;

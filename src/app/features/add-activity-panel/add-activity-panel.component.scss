@@ -1,6 +1,8 @@
 .add-activity-panel-container {
+  flex-shrink: 0; /* Prevent shrinking */
+
   width: 100%;
-  height: 9%;
+  height: 100%;
   margin-bottom: 1%;
   background-color: var(--ds-surface-overlay);
   border-radius: 8px;
