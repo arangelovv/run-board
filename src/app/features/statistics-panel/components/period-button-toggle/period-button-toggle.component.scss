@@ -1,0 +1,25 @@
+.button-toggle-container {
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  padding: 4px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .vertical-divider-border {
+    border-left: 1px solid #d1d5db; /* Create a thin vertical border */
+    height: auto; /* Set the height of the divider */
+  }
+
+  .selected-period {
+    color: #10b981;
+    font-weight: 600;
+  }
+}
