@@ -1,6 +1,13 @@
 <div class="user-panel-container">
   <div class="user-panel-header">
-    <img [src]="userProfileImage" alt="image" />
+    <img
+      [src]="
+        authService.user()?.photoURL
+          ? authService.user()?.photoURL
+          : defaultProfileImage
+      "
+      alt="image"
+    />
     <span class="username">{{ authService.user()?.displayName }}</span>
   </div>
   <div class="user-panel-stats">

@@ -7,10 +7,11 @@ import {
   signOut,
   User,
 } from '@angular/fire/auth';
-import { AuthState, AuthUser } from './models/auth.models';
+import { AuthState, AuthUser, UserEntity } from './models/auth.models';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { serverTimestamp } from 'firebase/firestore';
 import { Router } from '@angular/router';
+import { FirestoreService } from '../firestore/firestore.service';
 
 @Injectable({
   providedIn: 'root',
@@ -18,6 +19,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   private auth = inject(Auth);
   private router = inject(Router);
+  private firestoreService = inject(FirestoreService);
 
   //source
   private user$ = authState(this.auth);
@@ -44,6 +46,22 @@ export class AuthService {
     signInWithPopup(this.auth, provider)
       .then((result) => {
         const user = result.user;
+
+        const userEntity: UserEntity = {
+          metadata: {
+            createdAt: serverTimestamp(),
+            updatedAt: serverTimestamp(),
+          },
+          information: {
+            email: user.email ?? '',
+            displayName: user.displayName ?? '',
+            profilePhotoUrl: user.photoURL ?? '',
+          },
+        };
+
+        console.log(userEntity);
+        this.firestoreService.setDoc('users', userEntity, user.uid);
+
         console.warn(user.displayName, 'signed in.');
         this.router.navigate(['dashboard']);
       })
