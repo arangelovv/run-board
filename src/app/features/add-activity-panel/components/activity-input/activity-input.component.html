@@ -1,3 +1,14 @@
 <div class="input-container">
-  <input type="text" [placeholder]="placeholder" class="activity-input" />
+  <div class="relative-wrapper">
+    <input
+      type="text"
+      [placeholder]="placeholder"
+      class="activity-input"
+      [value]="value"
+      (input)="onInputChange($event)"
+    />
+    @if (lable) {
+    <span class="input-label-absolute">{{ lable }}</span>
+    }
+  </div>
 </div>

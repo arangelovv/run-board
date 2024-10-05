@@ -1,14 +1,44 @@
 <div class="add-activity-panel-container">
   <div class="activity-props">
-    <app-activity-input placeholder="Distance" />
-    <app-activity-dropdown-input placeholder="Run Type" />
-    <app-activity-dropdown-input placeholder="Day Period" />
-    <app-activity-input placeholder="Pace" />
-    <app-activity-input placeholder="Time" />
-    <app-activity-input placeholder="Intensity" />
-    <app-activity-input placeholder="Cadance" />
+    <form class="activity-props" [formGroup]="newRunLogForm">
+      <app-activity-input
+        placeholder="Distance"
+        formControlName="distance"
+        lable="/km"
+      />
+      <app-activity-dropdown-input
+        placeholder="Run Type"
+        formControlName="runType"
+        [options]="runTypeOptions"
+      />
+      <app-activity-dropdown-input
+        placeholder="Day Period"
+        formControlName="dayPeriod"
+        [options]="dayPeriodOptions"
+      />
+      <app-activity-input
+        placeholder="Pace"
+        formControlName="pace"
+        lable="km/min"
+      />
+      <app-activity-input
+        placeholder="Duration"
+        formControlName="runDuration"
+        lable="h.m.s"
+      />
+      <app-activity-input
+        placeholder="Intensity"
+        formControlName="intensity"
+        lable="/bpm"
+      />
+      <app-activity-input
+        placeholder="Cadance"
+        formControlName="cadance"
+        lable="/spm"
+      />
+    </form>
   </div>
   <div class="add-activity-button-container">
-    <app-add-activity-button />
+    <app-add-activity-button (click)="onCreateNewRunLog()" />
   </div>
 </div>

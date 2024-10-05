@@ -32,4 +32,9 @@ export class FirestoreService {
       : doc(this.firestore, collection);
     setDoc(docRef, data);
   }
+
+  public addNewDoc<T extends DocumentData>(collectionName: string, data: T) {
+    const collectionRef = collection(this.firestore, collectionName);
+    return addDoc(collectionRef, data);
+  }
 }

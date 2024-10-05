@@ -6,9 +6,26 @@
 }
 
 .activity-input {
-  width: 100px; /* Set a fixed width for the input */
+  width: max-content; /* Set a fixed width for the input */
+  max-width: 125px;
   padding: 4px 8px; /* Adjust padding for a smaller size */
   font-size: 14px; /* Set a smaller font size */
   border: 1px solid #ddd; /* Optional: Border for visibility */
   border-radius: 4px; /* Optional: Rounding corners */
+  box-sizing: border-box; /* Ensure padding and borders are included in the element's width */
+}
+
+.relative-wrapper {
+  position: relative; /* Make this container relative for absolute positioning */
+  display: inline-flex; /* Inline-flex to keep input and label on the same line */
+}
+
+.input-label-absolute {
+  position: absolute;
+  right: 10px; /* Position label on the right side of the input */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Vertically align in the middle */
+  font-size: 14px;
+  color: #aaa; /* Optional: Color for the label */
+  pointer-events: none; /* Prevent the label from blocking input field interactions */
 }

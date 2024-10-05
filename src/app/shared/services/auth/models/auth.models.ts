@@ -1,20 +1,10 @@
 import { User } from '@angular/fire/auth';
-import { FieldValue } from 'firebase/firestore';
+import { Entity } from '../../../models/entities.models';
 
 export type AuthUser = User | null | undefined;
 
 export interface AuthState {
   user: AuthUser;
-}
-
-//----------Raw Entity----------
-interface EntityMetaData {
-  createdAt: FieldValue;
-  updatedAt: FieldValue;
-}
-
-export interface Entity {
-  metadata: EntityMetaData;
 }
 
 //----------User Entity----------
